@@ -30,10 +30,7 @@ def delete_student(student_id):  # noqa: E501
 
     :rtype: None
     """
-    if connexion.request.is_json:
-        body = Student.from_dict(connexion.request.get_json())  #noqa: E501
-        return delete(body)
-    return 500, 'error'
+    return delete(student_id)
 
 
 def get_student_by_id(student_id):  # noqa: E501
