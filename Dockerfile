@@ -11,6 +11,7 @@ COPY . /usr/src/app
 
 EXPOSE 8080
 
+#set executables that will always run when the container is initiated.
 ENTRYPOINT ["python3"]
 
 CMD ["-m", "swagger_server"]
